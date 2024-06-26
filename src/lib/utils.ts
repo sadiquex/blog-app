@@ -3,5 +3,12 @@ export const formatCreatedAt = (createdAt: {
   nanoseconds: number;
 }) => {
   const date = new Date(createdAt?.seconds * 1000);
-  return date.toLocaleString();
+  const formattedDate = date.toLocaleString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+  });
+  return formattedDate;
 };

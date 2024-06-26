@@ -57,11 +57,11 @@ export default function CreateBlog() {
   };
 
   return (
-    <div className="container mx-auto flex flex-col items-center justify-center bg-gray-100 p-8 font-inter">
+    <div className="flex h-screen flex-col items-center justify-center bg-gray-100 p-4 font-inter sm:p-8">
       <h1 className="mb-6 text-3xl font-semibold">Create Blog</h1>
       <div className="w-full max-w-lg space-y-4 rounded-md bg-white p-6 shadow-md">
         <div className="flex flex-col">
-          <label className="mb-2 font-semibold text-gray-700">Title:</label>
+          <label className="mb-2 font-semibold text-gray-700">Title</label>
           <input
             type="text"
             placeholder="Title..."
@@ -70,16 +70,18 @@ export default function CreateBlog() {
           />
         </div>
         <div className="flex flex-col">
-          <label className="mb-2 font-semibold text-gray-700">Post:</label>
+          <label className="mb-2 font-semibold text-gray-700">
+            Blog Content
+          </label>
           <textarea
-            placeholder="Post..."
+            placeholder="Blog Post Content..."
             className="rounded-md border p-2 outline-none"
             onChange={(event) => setBlogContent(event.target.value)}
             rows={5}
           />
         </div>
         <div className="flex flex-col">
-          <label className="mb-2 font-semibold text-gray-700">Image:</label>
+          <label className="mb-2 font-semibold text-gray-700">Image</label>
           <input
             type="file"
             className="rounded-md border p-2 outline-none"

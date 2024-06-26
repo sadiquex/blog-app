@@ -27,7 +27,7 @@ export default function Navbar() {
     <nav className="w-full border-b border-black">
       <div className="container flex flex-wrap justify-between gap-4 px-4 py-8 sm:flex-row sm:gap-0 sm:px-0">
         {/* logo */}
-        <h2 className="cursor-pointer whitespace-nowrap text-center font-bricolage text-lg font-bold uppercase sm:text-left sm:text-2xl">
+        <h2 className="w-full cursor-pointer whitespace-nowrap text-center font-bricolage text-xl font-bold uppercase sm:w-auto sm:text-left sm:text-2xl">
           Sadique Blog
         </h2>
         {/* dynamically display the user name if there's one (if they're logged in) */}
@@ -49,7 +49,7 @@ export default function Navbar() {
             </button>
           </div>
         ) : (
-          <ul className="flex flex-row items-center justify-center gap-4">
+          <ul className="flex w-full flex-row items-center justify-center gap-4 sm:w-auto">
             <li>
               <Link
                 to={"/login"}

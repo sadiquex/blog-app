@@ -7,6 +7,7 @@ import CreateBlog from "./pages/CreateBlog";
 import BlogDetails from "./pages/BlogDetails";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
@@ -15,8 +16,6 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
@@ -28,6 +27,9 @@ export default function App() {
         <Route element={<ProtectedRoute />}>
           <Route path="/createblog" element={<CreateBlog />} />
         </Route>
+
+        {/* catch-all route for 404 Not Found */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

@@ -167,7 +167,7 @@ export default function BlogDetails() {
         </>
       ) : (
         <>
-          <h1 className="text-center font-bricolage text-4xl font-semibold">
+          <h1 className="container text-center font-bricolage text-4xl font-semibold sm:w-[80%]">
             {blog.title}
           </h1>
           {user?.uid === blog.author.id && (
@@ -202,7 +202,7 @@ export default function BlogDetails() {
             alt={blog.title}
             className="h-[65vh] w-full rounded-3xl object-cover"
           />
-          <p className="text-md w-[60%] font-inter">{blog.blogContent}</p>
+          <p className="text-md font-inter sm:w-[60%]">{blog.blogContent}</p>
         </>
       )}
 
